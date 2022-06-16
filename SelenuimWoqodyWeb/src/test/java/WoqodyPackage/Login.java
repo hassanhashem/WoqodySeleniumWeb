@@ -1,5 +1,6 @@
 package WoqodyPackage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class Login {
@@ -11,6 +12,7 @@ public class Login {
 	driver.findElement(By.xpath("//*[@id=\"login_email\"]")).sendKeys("admin@woqody-staging.tech");
 	driver.findElement(By.xpath("//*[@id=\"login_password\"]")).sendKeys("@P@2CK550OQylm");
 	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/form/div[3]/div/div/span/button")).click();
+	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/form/div[3]/div/div/span/button")).sendKeys(Keys.RETURN);
 }	
 	
 	
