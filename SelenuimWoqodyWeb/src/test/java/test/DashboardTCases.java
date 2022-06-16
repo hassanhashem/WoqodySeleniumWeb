@@ -14,12 +14,12 @@ import Pages.DashboardPage;
 import Pages.LoginPage;
 //-----------------------------------------------------------------------------------
 //start of test case
-public class LoginTC 
+public class DashboardTCases 
 {
 	WebDriver driver = null;
 	ExtentSparkReporter spark;
 	ExtentReports extent;
-	
+			
 			@BeforeTest
 			public void setupTest() 
 				{
@@ -30,31 +30,30 @@ public class LoginTC
 				//end of reports
 				System.setProperty("webdriver.chrome.driver","D:\\Automation\\SelenuimWoqodyWeb\\drivers\\chromedriver.exe");
 				driver = new ChromeDriver();
-				}	
+				}
+					
 			@Test
-			public void login()
+			public void Globalsearch()
 				{
 					//Reports
 					ExtentTest test = extent.createTest("Woqody Dashboard Test Results");
 					test.pass("Pass");
 					test.log(Status.PASS, "Login");
-					//end of reports
+					//-------------------------------end of reports-------------------------
 					driver.get("https://staging-admin.woqody.tech/login");
 					LoginPage.loginusername(driver).sendKeys("admin@woqody-staging.tech");
 					LoginPage.loginpassword(driver).sendKeys("@P@2CK550OQylm");
 					LoginPage.loginbutton(driver).click();
-					//DashboardPage.homepageheader(driver).click();
-					//DashboardPage.Globalsearch(driver).sendKeys("admin@woqody-staging.tech");
+					DashboardPage.Globalsearch(driver).click();
 				}
 			//End of test case
-			//---------------------------------------------------------------------------------------
-			//@AfterTest()
-			//System.out.println("End of test case");
-			//public void teardown() 
-			//	{
-			//	extent.flush();
+			
+			@AfterTest()
+			public void teardown() 
+				{
+				extent.flush();
 				
-			//	}
+				}
 			
 
 }
