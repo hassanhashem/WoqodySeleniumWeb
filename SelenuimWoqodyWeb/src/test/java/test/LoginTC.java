@@ -32,29 +32,36 @@ public class LoginTC
 				driver = new ChromeDriver();
 				}	
 			@Test
-			public void login()
+			public void Validlogin()
 				{
 					//Reports
 					ExtentTest test = extent.createTest("Woqody Dashboard Test Results");
 					test.pass("Pass");
 					test.log(Status.PASS, "Login");
 					//end of reports
+					driver.manage().window().maximize();
 					driver.get("https://staging-admin.woqody.tech/login");
 					LoginPage.loginusername(driver).sendKeys("admin@woqody-staging.tech");
 					LoginPage.loginpassword(driver).sendKeys("@P@2CK550OQylm");
 					LoginPage.loginbutton(driver).click();
-					//DashboardPage.homepageheader(driver).click();
-					//DashboardPage.Globalsearch(driver).sendKeys("admin@woqody-staging.tech");
+					
 				}
 			//End of test case
+			
+			
+			
+			
+			
+			
+			
+			
 			//---------------------------------------------------------------------------------------
-			//@AfterTest()
-			//System.out.println("End of test case");
-			//public void teardown() 
-			//	{
-			//	extent.flush();
-				
-			//	}
+			@AfterTest()
+								
+			public void teardown() 
+			{
+				extent.flush();				
+			}
 			
 
 }
