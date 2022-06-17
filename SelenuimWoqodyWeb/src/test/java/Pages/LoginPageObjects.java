@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 //----------------------------------------Add Objects locators-----------------------------------------------------
 public class LoginPageObjects 
@@ -24,9 +25,9 @@ public void setpassword(String text)
 			driver.findElement(password).sendKeys(text);
 
 	}
-public void loginbutton() 
+public void Clickloginbutton() 
 	{
-			driver.findElement(loginbutton).click();
+			driver.findElement(loginbutton).sendKeys(Keys.RETURN);
 
 	}
 

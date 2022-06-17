@@ -14,7 +14,7 @@ import Pages.DashboardPage;
 import Pages.LoginPage;
 //-----------------------------------------------------------------------------------
 //start of test case
-public class LoginTC 
+public class Woqody_LoginTC 
 {
 	WebDriver driver = null;
 	ExtentSparkReporter spark;
@@ -46,15 +46,7 @@ public class LoginTC
 					LoginPage.loginbutton(driver).click();
 					
 				}
-			//End of test case
-			
-			
-			
-			
-			
-			
-			
-			
+			//End of test case			
 			//---------------------------------------------------------------------------------------
 			@AfterTest()
 								
