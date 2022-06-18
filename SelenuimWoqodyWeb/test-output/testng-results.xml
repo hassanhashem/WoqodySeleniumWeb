@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-17T16:04:30 EET" name="Default suite" finished-at="2022-06-17T16:04:43 EET" duration-ms="12676">
+  <suite started-at="2022-06-18T04:14:13 EET" name="Default suite" finished-at="2022-06-18T04:14:25 EET" duration-ms="12038">
     <groups>
     </groups>
-    <test started-at="2022-06-17T16:04:30 EET" name="Default test" finished-at="2022-06-17T16:04:43 EET" duration-ms="12676">
-      <class name="test.LoginTC">
-        <test-method is-config="true" signature="setupTest()[pri:0, instance:test.LoginTC@2ed2d9cb]" started-at="2022-06-17T16:04:30 EET" name="setupTest" finished-at="2022-06-17T16:04:33 EET" duration-ms="2783" status="PASS">
+    <test started-at="2022-06-18T04:14:13 EET" name="Default test" finished-at="2022-06-18T04:14:25 EET" duration-ms="12038">
+      <class name="test.Woqody_LoginTC">
+        <test-method is-config="true" signature="setupTest()[pri:0, instance:test.Woqody_LoginTC@316bcf94]" started-at="2022-06-18T04:14:13 EET" name="setupTest" finished-at="2022-06-18T04:14:16 EET" duration-ms="2492" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method signature="Validlogin()[pri:0, instance:test.LoginTC@2ed2d9cb]" started-at="2022-06-17T16:04:33 EET" name="Validlogin" finished-at="2022-06-17T16:04:43 EET" duration-ms="9483" status="PASS">
+        <test-method signature="Validlogin()[pri:0, instance:test.Woqody_LoginTC@316bcf94]" started-at="2022-06-18T04:14:16 EET" name="Validlogin" finished-at="2022-06-18T04:14:25 EET" duration-ms="9140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Validlogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTC@2ed2d9cb]" started-at="2022-06-17T16:04:43 EET" name="teardown" finished-at="2022-06-17T16:04:43 EET" duration-ms="375" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Woqody_LoginTC@316bcf94]" started-at="2022-06-18T04:14:25 EET" name="teardown" finished-at="2022-06-18T04:14:25 EET" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- test.LoginTC -->
+      </class> <!-- test.Woqody_LoginTC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
