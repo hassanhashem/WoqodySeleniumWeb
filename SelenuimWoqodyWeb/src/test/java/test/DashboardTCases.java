@@ -1,5 +1,6 @@
 package test;
 import org.testng.annotations.Test;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -8,12 +9,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
+import Pages.DashboardPage;
 import Pages.LoginPage;
-
 //-----------------------------------------------------------------------------------
 //start of test case
-public class LoginTC 
+public class DashboardTCases 
 {
 	WebDriver driver = null;
 	ExtentSparkReporter spark;
@@ -30,6 +30,7 @@ public class LoginTC
 				System.setProperty("webdriver.chrome.driver","D:\\Automation\\SelenuimWoqodyWeb\\drivers\\chromedriver.exe");
 				driver = new ChromeDriver();
 				}	
+			@SuppressWarnings("deprecation")
 			@Test
 			public void Validlogin()
 				{
@@ -43,12 +44,14 @@ public class LoginTC
 					LoginPage.loginusername(driver).sendKeys("admin@woqody-staging.tech");
 					LoginPage.loginpassword(driver).sendKeys("@P@2CK550OQylm");
 					LoginPage.loginbutton(driver).click();
+					driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+					DashboardPage.swlanguage(driver).click();
+					
 					
 				}
 			//End of test case			
 			//---------------------------------------------------------------------------------------
 			@AfterTest()
-								
 			public void teardown() 
 			{
 				extent.flush();				
