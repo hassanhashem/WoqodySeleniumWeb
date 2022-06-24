@@ -12,12 +12,14 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import Pages.DashboardPage;
 import Pages.LoginPage;
+import Pages.OrganizationsPage;
 //start of test case
-public class DashboardTCases 
+public class OrganizationsTCases 
 {
 	WebDriver driver = null;
 	ExtentSparkReporter spark;
 	ExtentReports extent;
+	@SuppressWarnings("deprecation")
 	@BeforeTest
 	public void Login() throws InterruptedException 
 	{
@@ -33,6 +35,10 @@ public class DashboardTCases
 		LoginPage.loginusername(driver).sendKeys("admin@woqody-staging.tech");
 		LoginPage.loginpassword(driver).sendKeys("@P@2CK550OQylm");
 		LoginPage.loginbutton(driver).click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		OrganizationsPage.Organizationslink(driver).click();
+
+
 	}	
 	//Start SWitchlanguage test case
 	@SuppressWarnings("deprecation")			
@@ -43,22 +49,11 @@ public class DashboardTCases
 		ExtentTest test = extent.createTest("Globalsearch Test Results");
 		test.log(Status.PASS, "Globalsearch");
 		//end of reports
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		DashboardPage.globalsearch(driver).sendKeys("01060121305");
-		DashboardPage.globalsearchbutton(driver).click();
-		DashboardPage.globalsearch(driver).sendKeys(Keys.CONTROL + "a");
-		DashboardPage.globalsearch(driver).sendKeys(Keys.DELETE);
+		//Start Test here...
+
 	}
 	//End of Test
-	@Test(priority = 2)
-	public void logout() {
-		//Reports
-		ExtentTest test = extent.createTest("Logout Test Results");
-		test.log(Status.PASS, "Logout");
-		//end of reports	
-		DashboardPage.logoutddl(driver).click();
-		DashboardPage.syslogout(driver).click();
-	}
+
 	@AfterTest()
 	public void teardown() 
 	{

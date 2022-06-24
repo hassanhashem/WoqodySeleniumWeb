@@ -26,11 +26,4 @@ public class LoginPage
 		return element;		
 	}
 	
-	//public static WebElement  Switchlanguage (WebDriver driver ) 
-	//{
-	//	element = driver.findElement(By.xpath("//div[2]//button[1]//span[2]"));
-	//	return element;		
-	//}
-		
-	//----------------------------------------------------------------------------------------------------------
 }
