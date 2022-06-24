@@ -5,9 +5,9 @@
     <classes>
       <class name="test.OrganizationsTCases">
         <methods>
+          <include name="Createneworg"/>
           <include name="Globalsearch"/>
           <include name="teardown"/>
-          <include name="Login"/>
         </methods>
       </class> <!-- test.OrganizationsTCases -->
     </classes>

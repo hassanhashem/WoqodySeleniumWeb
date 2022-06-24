@@ -54,7 +54,6 @@ public class OrganizationsTCases
 		String expected = "New organization successfully";
 		Assert.assertEquals(actual, expected);
 
-
 	}	
 	//Start SWitchlanguage test case
 	@SuppressWarnings("deprecation")			
