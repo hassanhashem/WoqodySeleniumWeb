@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-24T19:54:32 EET" name="Default suite" finished-at="2022-06-24T19:55:03 EET" duration-ms="30645">
+  <suite started-at="2022-06-27T11:12:59 EET" name="Default suite" finished-at="2022-06-27T11:13:31 EET" duration-ms="31448">
     <groups>
     </groups>
-    <test started-at="2022-06-24T19:54:32 EET" name="Default test" finished-at="2022-06-24T19:55:03 EET" duration-ms="30645">
+    <test started-at="2022-06-27T11:12:59 EET" name="Default test" finished-at="2022-06-27T11:13:31 EET" duration-ms="31448">
       <class name="test.OrganizationsTCases">
-        <test-method is-config="true" signature="Createneworg()[pri:0, instance:test.OrganizationsTCases@316bcf94]" started-at="2022-06-24T19:54:32 EET" name="Createneworg" finished-at="2022-06-24T19:55:02 EET" duration-ms="30230" status="PASS">
+        <test-method is-config="true" signature="Createneworg()[pri:0, instance:test.OrganizationsTCases@316bcf94]" started-at="2022-06-27T11:12:59 EET" name="Createneworg" finished-at="2022-06-27T11:13:25 EET" duration-ms="25992" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Createneworg -->
-        <test-method signature="CreateOrg()[pri:1, instance:test.OrganizationsTCases@316bcf94]" started-at="2022-06-24T19:55:02 EET" name="CreateOrg" finished-at="2022-06-24T19:55:02 EET" duration-ms="19" status="PASS">
+        <test-method signature="CreatenormalOrg()[pri:0, instance:test.OrganizationsTCases@316bcf94]" started-at="2022-06-27T11:13:26 EET" name="CreatenormalOrg" finished-at="2022-06-27T11:13:30 EET" duration-ms="4826" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateOrg -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.OrganizationsTCases@316bcf94]" started-at="2022-06-24T19:55:02 EET" name="teardown" finished-at="2022-06-24T19:55:03 EET" duration-ms="356" status="PASS">
+        </test-method> <!-- CreatenormalOrg -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.OrganizationsTCases@316bcf94]" started-at="2022-06-27T11:13:30 EET" name="teardown" finished-at="2022-06-27T11:13:31 EET" duration-ms="588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

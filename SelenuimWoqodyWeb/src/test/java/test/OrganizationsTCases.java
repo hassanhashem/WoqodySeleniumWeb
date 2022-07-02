@@ -1,5 +1,7 @@
 package test;
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
@@ -7,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.devtools.v101.browser.Browser;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -23,7 +26,7 @@ public class OrganizationsTCases
 	WebDriver driver = null;
 	ExtentSparkReporter spark;
 	ExtentReports extent;
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings("deprecation")	
 	@BeforeTest
 	public void Createneworg() throws InterruptedException 
 	{
@@ -39,6 +42,16 @@ public class OrganizationsTCases
 		LoginPage.loginusername(driver).sendKeys("admin@woqody-staging.tech");
 		LoginPage.loginpassword(driver).sendKeys("@P@2CK550OQylm");
 		LoginPage.loginbutton(driver).click();
+	}	
+	@SuppressWarnings("deprecation")			
+	@Test
+	public void CreatenormalOrg() throws InterruptedException
+	{
+		//Reports
+		ExtentTest test = extent.createTest("Create new org");
+		test.log(Status.PASS, "Create new org");
+		//end of reports
+		//Start Test here...
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		OrganizationsPage.Organizationslink(driver).click();
 		OrganizationsPage.NewOrganizationslink(driver).click();
@@ -53,26 +66,13 @@ public class OrganizationsTCases
 		System.out.println(actual);
 		String expected = "New organization successfully";
 		Assert.assertEquals(actual, expected);
-
-	}	
-	//Start SWitchlanguage test case
-	@SuppressWarnings("deprecation")			
-	@Test(priority = 1)
-	public void CreateOrg() throws InterruptedException
-	{
-		//Reports
-		ExtentTest test = extent.createTest("Create new org");
-		test.log(Status.PASS, "Create new org");
-		//end of reports
-		//Start Test here...
-
 	}
 	//End of Test
-
 	@AfterTest()
 	public void teardown() 
 	{
-		//driver.close();
+		driver.close();
 		extent.flush();
+		Browser.close();
 	}
 }
